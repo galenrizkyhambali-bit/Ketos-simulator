@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Ketua OSIS Simulator 3D</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<canvas id="c"></canvas>
+<div id="menu" class="ov"><h1>KETUA OSIS<br>SIMULATOR</h1>
+ <div id="mainbtns"><button id="bNew">Game Baru</button><button id="bCont">Lanjutkan</button></div>
+ <div id="create" hidden>
+  <input id="fName" placeholder="Nama karakter" maxlength="16">
+  <input id="fSchool" placeholder="Nama sekolah" maxlength="30">
+  <input id="fHead" placeholder="Nama kepala sekolah" maxlength="24">
+  <label>Gender<select id="fG"><option value="m">Laki-laki</option><option value="f">Perempuan</option></select></label>
+  <label>Rambut<select id="fHair"><option value="0">Pendek</option><option value="1">Panjang</option><option value="2">Cepol</option></select></label>
+  <label>Pakaian<select id="fCl"><option value="0">Kemeja seragam</option><option value="1">Jaket OSIS</option></select></label>
+  <label>Warna seragam<input id="fCol" type="color" value="#ffffff"></label>
+  <button id="bStart">Mulai Bermain</button>
+ </div></div>
+<div id="hud" hidden>
+ <div id="clock"></div><div id="loc"></div><div id="stam"><i id="stamI"></i></div><div id="rep"></div>
+ <canvas id="mini" width="96" height="96"></canvas><button id="bPause">II</button>
+ <div id="quest"></div><div id="toast" hidden></div><button id="bAct" hidden></button>
+ <div id="joy"><i></i></div><button id="bRun">LARI</button><button id="bJump">LOMPAT</button>
+</div>
+<div id="dlg" hidden><b id="dwho"></b><p id="dtxt"></p><div id="dopts"></div></div>
+<div id="pause" class="ov" hidden><h2>Jeda</h2><div id="pinfo"></div>
+ <div class="row"><button id="bRes">Lanjut</button><button id="bSave">Simpan</button><button id="bTime">+1 Jam</button><button id="bMenu">Menu Utama</button></div></div>
+<script src="https://cdn.babylonjs.com/babylon.js"></script>
+<script src="world.js"></script><script src="player.js"></script><script src="npc.js"></script><script src="osis.js"></script><script src="game.js"></script>
+</body></html>
